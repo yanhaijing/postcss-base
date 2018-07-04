@@ -1,0 +1,57 @@
+/* ########################### */
+/* automatic vendor prefixes */
+body {
+    display: flex;
+}
+
+
+
+/* custom properties & var() */
+:root {
+    --mainColor: red;
+}
+
+a {
+    color: var(--mainColor);
+}
+
+/* reduced calc() */
+:root {
+    --fontSize: 1rem;
+}
+
+h1 {
+    font-size: calc(var(--fontSize) * 2);
+}
+
+
+
+/* custom selectors & image-set() */
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+:--heading {
+    background-image: image-set(url(img/heading.png) 1x, url(img/heading@2x.png) 2x);
+}
+
+
+/* nesting */
+a {
+    /* direct nesting (& MUST be the first part of selector)*/
+    & span {
+        color: white;
+    }
+
+    /* @nest rule (for complex nesting) */
+    @nest span & {
+        color: blue;
+    }
+
+    /* media query automatic nesting */
+    @media (min-width: 30em) {
+        color: yellow;
+    }
+}
+
+/* color() function */
+a {
+    color: color(red alpha(-10%));
+}

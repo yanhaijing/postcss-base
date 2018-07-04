@@ -1,0 +1,86 @@
+/* ########################### */
+/* 变量 */
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$side: left;
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+
+}
+
+
+/* 运算 */
+$a: 10;
+$b: 10;
+article {
+    width: calc(600px + 960px - 100px * 4 / 2);
+    left: calc(600px + 1rem);
+}
+
+/* 嵌套 */
+nav {
+    a {
+        display: block;
+        &:hover {
+            color: #ffb3ff;
+        }
+        span {
+            text-decoration: none;
+        }
+    }
+    &.test {
+        padding: 6px 12px;
+    }
+}
+
+/* if else */
+body {
+    @if 3 < 5 {
+        background: green;
+    }
+    @else {
+        background: blue;
+    }
+}
+
+/* each */
+
+/* for */
+@for $i from 1 to 3 {
+    .b-$i {
+        width: $i;
+    }
+}
+
+/* mixin */
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+.box {
+    @include transform(rotate(30deg));
+}
+
+/* extend */
+%message-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+}
+
+.message {
+    @extend %message-shared;
+}
+
+.success {
+    @extend %message-shared;
+    border-color: green;
+}
+
+/* function */
+
