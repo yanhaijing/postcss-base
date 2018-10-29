@@ -1,0 +1,12 @@
+@import "test-var.css";
+
+$b: #666;
+
+.test-simple-vars {
+    .a {
+        color: $a;
+    }
+    .b {
+        color: $b;
+    }
+}

@@ -1,0 +1,15 @@
+.test-nested {
+    color: #111;
+    p {
+        color: #222;
+        &.test {
+            color: #fff;
+            span {
+                color: #444;
+            }
+        }
+        a {
+            color: #333;
+        }
+    }
+}

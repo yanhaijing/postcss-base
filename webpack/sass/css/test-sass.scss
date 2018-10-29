@@ -1,0 +1,77 @@
+.test-nested {
+    color: #111;
+    p {
+        color: #222;
+        &.test {
+            color: #fff;
+            span {
+                color: #444;
+            }
+        }
+        a {
+            color: #333;
+        }
+    }
+}
+
+
+.test-simple-vars {
+    $a: #111;
+    $b: #666;
+    .a {
+        color: $a;
+    }
+    .b {
+        color: $b;
+    }
+}
+
+
+.test-mixin {
+    @mixin mixin() {
+        background: white;
+    }
+    .test {
+        @include mixin();
+    }
+}
+
+.test-calc {
+    $a: 100;
+    font-size: calc(100px - 20px * 2);
+    line-height: 110 - $a;
+    line-height: calc(100px - 10rem);
+}
+
+.test-defineFunction {
+    @function rem($val) {
+        @return $val / 640 * 10 * 1rem;
+    }
+
+    .test-defineFunction {
+        /* Input example */
+        height: rem(640);
+    }
+
+}
+
+.test-conditionals {
+    @if 3 < 5 {
+        background: green;
+    }
+
+    @else {
+        background: blue;
+    }
+}
+
+
+.test-extendRule1 {
+    color: #111;
+}
+
+.test-extendRule2 {
+    @extend .test-extendRule1;
+    font-size: 16px;
+}
+

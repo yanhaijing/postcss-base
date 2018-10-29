@@ -1,0 +1,33 @@
+@import "test-custom-properties.scss";
+
+/* ============ stage3 ================= */
+.text-cssnext {
+    a {
+        all: initial;
+    }
+
+    img {
+        color: var(--mainColor);
+    }
+
+    h2 {
+        font-variant: small-caps;
+    }
+
+    .grid-1 {
+        gap: 20px;
+    }
+
+    .grid-2 {
+        column-gap: 40px;
+        row-gap: 20px;
+    }
+
+    // @media (width < 480px) {}
+
+    // @media (480px <=width < 768px) {}
+
+    // @media (width >=768px) {}
+}
+
+/* ============ stage3 ================= */

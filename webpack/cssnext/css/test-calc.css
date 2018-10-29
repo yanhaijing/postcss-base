@@ -1,0 +1,7 @@
+$a: 100;
+
+.test-calc {
+    font-size: calc(100px - 20px * 2);
+    line-height: calc(110 - $a);
+    line-height: calc(100px - 10rem);
+}

@@ -1,0 +1,30 @@
+{
+  "name": "cssnext",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "1.0.0",
+    "mini-css-extract-plugin": "0.4.4",
+    "postcss-calc": "7.0.1",
+    "postcss-conditionals": "2.1.0",
+    "postcss-define-function": "0.1.1",
+    "postcss-extend-rule": "2.0.0",
+    "postcss-import": "12.0.1",
+    "postcss-inline-comment": "3.0.0",
+    "postcss-loader": "3.0.0",
+    "postcss-nested": "4.1.0",
+    "postcss-preset-env": "6.2.0",
+    "postcss-sassy-mixins": "2.1.0",
+    "postcss-simple-vars": "5.0.1",
+    "style-loader": "0.23.1",
+    "webpack": "4.23.1",
+    "webpack-cli": "3.1.2"
+  }
+}

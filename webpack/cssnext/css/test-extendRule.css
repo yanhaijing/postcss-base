@@ -1,0 +1,8 @@
+.test-extendRule1 {
+    color: #111;
+}
+
+.test-extendRule2 {
+    @extend .test-extendRule1;
+    font-size: 16px;
+}
